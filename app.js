@@ -23,7 +23,7 @@ let logDirectory = __dirname + '/log';
 
 // Log all requests in a daily log file using morgan
 if (fs.existsSync(logDirectory) === false) {
-  fs.mkdirSync(logDirectory);
+  fs.mkdir(logDirectory);
 }
 app.use(log.expressBunyan);
 
